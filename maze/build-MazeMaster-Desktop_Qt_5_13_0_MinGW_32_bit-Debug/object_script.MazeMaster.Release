@@ -1,0 +1,15 @@
+release/chooselevelwindow.o
+release/imgbutton.o
+release/main.o
+release/mainwindow.o
+release/mapeditwindow.o
+release/mazedata.o
+release/playwindow.o
+release/tile.o
+release/qrc_res.o
+release/moc_chooselevelwindow.o
+release/moc_imgbutton.o
+release/moc_mainwindow.o
+release/moc_mapeditwindow.o
+release/moc_playwindow.o
+release/moc_tile.o

@@ -1,0 +1,15 @@
+debug/chooselevelwindow.o
+debug/imgbutton.o
+debug/main.o
+debug/mainwindow.o
+debug/mapeditwindow.o
+debug/mazedata.o
+debug/playwindow.o
+debug/tile.o
+debug/qrc_res.o
+debug/moc_chooselevelwindow.o
+debug/moc_imgbutton.o
+debug/moc_mainwindow.o
+debug/moc_mapeditwindow.o
+debug/moc_playwindow.o
+debug/moc_tile.o
