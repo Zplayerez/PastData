@@ -259,20 +259,115 @@ public:
 		doRemove(deleted);
 	}
 
-	void doRemove(Node* deleted) {
-		Node* replace = findReplace(deleted);
-		if (replace == nullptr) {
+	void fixDoubleBlack(Node* x) {
+		if (x == root) {
+			return;
+		}
+		Node* parent = x->parent;
+		Node* sibling = x->sibling();
+		if (isRed(sibling)) {
+			if (x->isLeftChild()) {
+				leftRotate(parent);
+			}
+			else {
+				rightRotate(parent);
+			}
+			parent->color = RED;
+			sibling->color = BLACK;
+			fixDoubleBlack(x);
+			return;
+		}
+		if (sibling != nullptr) {
+			if (isBlack(sibling->left) && isBlack(sibling->right)) {
+				sibling->color = RED;
+				if (isRed(parent)) {
+					parent->color = BLACK;
+				}
+				else {
+					fixDoubleBlack(parent);
+				}
+			}
+			else {
+				if (sibling->isLeftChild() && isRed(sibling->left)) {
+					rightRotate(parent);
+					sibling->left->color = BLACK;
+					sibling->color = parent->color;
+				}
+				else if (sibling->isLeftChild() && isRed(sibling->right)) {
+					sibling->right->color = parent->color;
+					leftRotate(sibling);
+					rightRotate(parent);
+				}
+				else if (!sibling->isLeftChild() && isRed(sibling->left)) {
+					sibling->left->color = parent->color;
+					rightRotate(sibling);
+					leftRotate(parent);
+				}
+				else {
+					leftRotate(parent);
+					sibling->right->color = BLACK;
+					sibling->color = parent->color;
+				}
+				parent->color = BLACK;
+			}
+		}
+		else {
+			fixDoubleBlack(parent);
+		}
+	}
 
+	void doRemove(Node* deleted) {
+		Node* replaced = findReplace(deleted);
+		Node* parent = deleted->parent;
+		if (replaced == nullptr) {
+			if (deleted == root) {
+				root = nullptr;
+			}
+			else {
+				if (isBlack(deleted)) {
+					fixDoubleBlack(deleted);
+				}
+				else {
+					//红色叶子，无需任何处理
+				}
+				if (deleted->isLeftChild()) {
+					parent->left = nullptr;
+				}
+				else {
+					parent->right = nullptr;
+				}
+				deleted->parent = nullptr;
+			}
 			return;
 		}
 		if (deleted->left == nullptr || deleted->right == nullptr) {
-
+			if (deleted == root) {
+				root->value = replaced->value;
+				root->left = root->right = nullptr;
+			}
+			else {
+				if (deleted->isLeftChild()) {
+					parent->left = replaced;
+				}
+				else {
+					parent->right = replaced;
+				}
+				replaced->parent = parent;
+				deleted->parent = nullptr;
+				deleted->left = deleted->right = nullptr;
+				if (isBlack(deleted) && isBlack(replaced)) {
+					fixDoubleBlack(replaced);
+				}
+				else {
+					replaced->color = BLACK;
+				}
+			}
 			return;
 		}
 		int t = deleted->value;
-		deleted->value = replace->value;
-		replace->value = deleted->value;
-		doRemove(replace);
+		deleted->value = replaced->value;
+		replaced->value = deleted->value;
+		doRemove(replaced);
 	}
 
 	Node* find(int value) {
@@ -298,7 +393,7 @@ public:
 		if (deleted->left == nullptr) {
 			return deleted->right;
 		}
-		if (deleted->right) {
+		if (deleted->right == nullptr) {
 			return deleted->left;
 		}
 		Node* s = deleted->right;
@@ -308,13 +403,29 @@ public:
 		return s;
 	}
 
+	void preOrderPrint(Node* root) {
+		if (root == nullptr) {
+			return;
+		}
+		if (root->color == RED) {
+
+		}
+	}
+
 private:
 	Node* root;
 };
 
 int main() {
-
-
+	RedBlackTree tree;
+	int N;
+	cin >> N;
+	for (int i = 0; i < N; i++)
+	{
+		int t;
+		cin >> t;
+		tree.put(t);
+	}
 
 	return 0;
 }
