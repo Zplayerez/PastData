@@ -1,0 +1,5 @@
+﻿  KMP.cpp
+D:\VSProjects\实验\KMP.cpp(13,11): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+D:\VSProjects\实验\KMP.cpp(34,11): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+D:\VSProjects\实验\KMP.cpp(35,11): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+  test02.vcxproj -> D:\VSProjects\数据结构\x64\Debug\test02.exe

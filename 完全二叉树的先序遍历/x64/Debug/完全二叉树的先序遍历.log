@@ -1,0 +1,3 @@
+﻿  完全二叉树的先序遍历.cpp
+D:\VSProjects\完全二叉树的先序遍历\完全二叉树的先序遍历.cpp(77,17): warning C4244: “+=”: 从“double”转换到“int”，可能丢失数据
+  完全二叉树的先序遍历.vcxproj -> D:\VSProjects\数据结构\x64\Debug\完全二叉树的先序遍历.exe

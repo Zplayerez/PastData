@@ -1,0 +1,3 @@
+﻿  test03.cpp
+D:\VSProjects\test03\test03.cpp(61,11): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+  test03.vcxproj -> D:\VSProjects\数据结构\x64\Debug\test03.exe

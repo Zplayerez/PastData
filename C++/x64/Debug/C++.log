@@ -1,0 +1,7 @@
+﻿  C++.cpp
+D:\VSProjects\C++\C++.cpp(597,1): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+D:\VSProjects\C++\C++.cpp(598,1): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+D:\VSProjects\C++\C++.cpp(603,1): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+D:\VSProjects\C++\C++.cpp(604,1): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+D:\VSProjects\C++\C++.cpp(658,1): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
+  C++.vcxproj -> D:\VSProjects\C++\x64\Debug\C++.exe

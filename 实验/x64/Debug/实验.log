@@ -1,0 +1,6 @@
+﻿D:\Visual Studio community 2022(1)\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(531,5): warning MSB8028: 中间目录(x64\Debug\)包含从另一个项目(测试.vcxproj)共享的文件。   这会导致错误的清除和重新生成行为。
+  BM.cpp
+D:\VSProjects\实验\BM.cpp(14,11): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+D:\VSProjects\实验\BM.cpp(22,11): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+D:\VSProjects\实验\BM.cpp(23,11): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+  实验.vcxproj -> D:\VSProjects\数据结构\x64\Debug\test01.exe
