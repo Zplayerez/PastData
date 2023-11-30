@@ -49,6 +49,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "创建AVL树并判断是否
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "创建RB树", "..\创建RB树\创建RB树.vcxproj", "{0BE9DBC8-21B4-4491-9D1F-4BD44500CC42}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "test04", "..\test04\test04.vcxproj", "{82EA31E8-764B-4ACC-B325-0F59EF8FF69C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -241,6 +243,14 @@ Global
 		{0BE9DBC8-21B4-4491-9D1F-4BD44500CC42}.Release|x64.Build.0 = Release|x64
 		{0BE9DBC8-21B4-4491-9D1F-4BD44500CC42}.Release|x86.ActiveCfg = Release|Win32
 		{0BE9DBC8-21B4-4491-9D1F-4BD44500CC42}.Release|x86.Build.0 = Release|Win32
+		{82EA31E8-764B-4ACC-B325-0F59EF8FF69C}.Debug|x64.ActiveCfg = Debug|x64
+		{82EA31E8-764B-4ACC-B325-0F59EF8FF69C}.Debug|x64.Build.0 = Debug|x64
+		{82EA31E8-764B-4ACC-B325-0F59EF8FF69C}.Debug|x86.ActiveCfg = Debug|Win32
+		{82EA31E8-764B-4ACC-B325-0F59EF8FF69C}.Debug|x86.Build.0 = Debug|Win32
+		{82EA31E8-764B-4ACC-B325-0F59EF8FF69C}.Release|x64.ActiveCfg = Release|x64
+		{82EA31E8-764B-4ACC-B325-0F59EF8FF69C}.Release|x64.Build.0 = Release|x64
+		{82EA31E8-764B-4ACC-B325-0F59EF8FF69C}.Release|x86.ActiveCfg = Release|Win32
+		{82EA31E8-764B-4ACC-B325-0F59EF8FF69C}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
